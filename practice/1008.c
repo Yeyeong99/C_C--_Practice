@@ -2,9 +2,8 @@
 
 int main()
 {
-    int a, b;
+    double a, b;
     scanf("%d %d", &a, &b);
-    printf("%d\n", a + b);
+    printf("%.9lf", a / b);
     return 0;
 }
-

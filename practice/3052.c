@@ -2,18 +2,19 @@
 
 int main()
 {
-    int num, score =0;
+    int num = 0, score = 0;
 
     for (int i = 0; i < 10; i++)
     {
         int a;
         scanf("%d", &a);
-        num = a % 42;
-        if (a != num)
+        int b = a % 42;
+        if (b != num)
         {
+            num = b;
             score += 1;
         }
     }
-    printf("%d %d", num, score);
+    printf("%d", score);
     return 0;
 }

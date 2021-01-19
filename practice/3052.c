@@ -6,9 +6,8 @@ int main()
 
     for (int i = 0; i < 10; i++)
     {
-        int a;
-        scanf("%d", &a);
-        int b = a % 42;
+        scanf("%d", &i);
+        int b = i % 42;
         if (b != num)
         {
             num = b;

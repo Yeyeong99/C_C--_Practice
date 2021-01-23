@@ -2,27 +2,27 @@
 #include <string.h>
 int main()
 {
-    int num, score, total, score_list[80];
+    int num, score, total;
     char answer[80];
 
     scanf("%d", &num);
     for (int i = 0; i < num; i++)
     {
         scanf("%s", answer);
+        score = 1, total = 0;
         for (int j = 0; j < strlen(answer); j++)
         {
             if (answer[j] == 'O')
             {
-                score++;
                 total += score;
+                score++;
+            }
+            else
+            {
+                score = 1;
             }
         }
-        score_list[i] = total;
-        score = 0;
-        total = 0;
+        printf("%d \n", total);
     }
-    for (int i = 0; i < sizeof(score_list); i++)
-    {
-        printf("%d", score_list[i]);
-    }
+    return 0;
 }
